@@ -9,6 +9,7 @@ function GetData(page) {
     }
 
     $.ajax({
+        
         url: "../api/src/users.php",
         data: params,
         cache: false,
