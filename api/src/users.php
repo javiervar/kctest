@@ -10,7 +10,7 @@ $dbConn =  connect($db);
  */
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $page = $_GET['page'];
-
+  $page=(int)$page*5;
   //If the session does not exist
   if(!isset($_SESSION["user"])){
     $data = [

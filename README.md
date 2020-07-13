@@ -10,8 +10,8 @@ Steps to run the project
 
 
 
-Tested on:
-MAC OS Mojave
+Tested on:<br>
+MAC OS Mojave<br>
 XAMP 7.4.7
 
 

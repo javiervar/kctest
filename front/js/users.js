@@ -9,15 +9,15 @@ function GetData(page) {
     }
 
     $.ajax({
-        
         url: "../api/src/users.php",
         data: params,
         cache: false,
         success: function (data) {
             var data = JSON.parse(data);
+            console.log(data)
             //If user does not logged in redirect to login page
             if (data.error) {
-                window.location.href = "index.html";
+               window.location.href = "index.html";
                 return;
             }
             var users = data.data;
@@ -27,7 +27,7 @@ function GetData(page) {
                 <div class="col column"><div class="column-name"> <img src="img/correct.png" alt=""> 
                 <div><p class="row-user">${users[i].user_name}</p> 
                 <p class="row-name">${users[i].first_name} ${users[i].last_name}</p> </div></div></div><div class="col column"> <div class="column-desc"> <div><a href="#">...</a> 
-                <p>Group</p></div></div></div></div>`;
+                <p>${users[i].group_name}</p></div></div></div></div>`;
             }
             $("#table_content").html(row)
             var page_num = "";
